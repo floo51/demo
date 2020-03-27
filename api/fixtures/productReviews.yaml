@@ -1,0 +1,8 @@
+App\Entity\ProductReview:
+    productReview_{1..400}:
+        date: <dateTimeThisDecade()>
+        customer: '@customer_*'
+        product: '@product_*'
+        comment: <text(255)>
+        status: <randomElement(['pending', 'accepted', 'rejected'])>
+        rating: <randomFloat(0, 1, 5)>
