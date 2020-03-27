@@ -1,0 +1,11 @@
+App\Entity\Invoice:
+    invoice_{1..400}:
+        reference: <ean8()>
+        date: <dateTimeThisDecade()>
+        customer: '@customer_*'
+        command: '@command_*'
+        total_ex_taxes: <randomFloat(2, 100, 300)>
+        delivery_fees: <randomFloat(2, 1, 12)>
+        taxes: <randomFloat(2, 2, 20)>
+        total: <randomFloat(2, 100, 400)>
+
